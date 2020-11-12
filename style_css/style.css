@@ -1,0 +1,9 @@
+.valor{
+    font-size: 1.5em;
+    color: red;
+    font-weight: bold;
+}
+.De{
+    font-size: 1.2em;
+    text-decoration: line-through;
+}
