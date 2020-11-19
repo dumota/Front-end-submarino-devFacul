@@ -1,4 +1,5 @@
 <?php
+    session_start();//iniciando uma sessão, ele creia um arquivo la no servidor , fica um tempo ativa, depois ele sai
     require "config/conexao.php";
 ?>
 <!DOCTYPE html>
@@ -12,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
     <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-    <link rel="stylesheet" type="text/css" href="style_css/style.css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>     
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -55,12 +55,23 @@
                 ?>
            
             </ul>
+
+
+             <ul class="navbar-nav ml-auto">
+                   <li class="nav-link">
+                       <a class="nav-link" href="index.php?pagina=carrinho">
+                           <i class="fas  fa-shopping-cart"></i>
+                       </a>
+                   </li>
+             </ul>      
+
+
             <form class="form-inline my-2 my-lg-0" name="formBusca" action="index.php">
             <input class="form-control mr-sm-2" name="busca" type="search" placeholder="Busca" aria-label="Search">
             <button class="btn btn-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        </nav>
+         </nav>
         <main class="container">
             <?php           
                 //verificar ou fazer receber o valor da pagina( variavel) ta vindo por get
@@ -78,8 +89,17 @@
                 }
             ?>       
         </main>
-        <footer>
-        
+        <footer class="bg-primary">
+                <div class="container">
+                    <p class="text-center">SubSubmarino - Comércio eletrônico</p>
+                    <p class="text-center">
+                        <strong>Meios de pagamento:</strong>
+                        <p class="text-center">
+                            <img src="images/pagamentos.png" alt="Meios de Pagamento">
+                        </p>
+                    </p>
+                    <hr>
+                </div>
         
         </footer>
 

@@ -15,7 +15,7 @@
     $dados  = mysqli_fetch_array($result);
 
     //recuperar os dados do banco
-    $id = $dados;
+    $id        = $dados["id"];
     $produto   = $dados["produto"];
     $valor     = $dados["valor"];
     $promo     = $dados["promo"];
@@ -33,7 +33,25 @@
          <img src="produtos/<?=$imagem?>" alt="<?=$produto?>" class="w-100">   
        </a> 
     </div>
+
     <div class="col-12 col-md-8">
-        <?=$descricao?>
+        tarefa colocar o valor
+
+    <form name="formProduto" method="post" action="index.php?pagina=adicionar">
+        <input type="hidden" name="id" value="<?= $id ?>">
+        <div class="input-group">
+            <input type="number" name="quantidade" value="1" class="form-control form-control-lg" placeholder="quantidade" required inputmode="numeric">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-success btn-lg">
+                    <i class="fas fa-check"></i>
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+
+    </form>
+    <h2 class="text-center">Descrição do produto</h2>
+    <!-- o nl2br= new line two br, quebra linhas entre os enters -->
+    <?=nl2br($descricao);?>
     </div>
 </div>
