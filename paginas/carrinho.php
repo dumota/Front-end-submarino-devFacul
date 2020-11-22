@@ -5,6 +5,11 @@
 <h1 class="text-center">Carrinho de Compras</h1>
 <?php
 
+    //print_r($_SESSION["cliente"]);
+    //dizer uma mensagem de oi para o cliente se a variavel existir
+    if(isset($_SESSION['cliente']['nome'])){
+        echo "<p><strong> Olá ".$_SESSION['cliente']['nome']."-<a href='sair.php'>Efetuar Logout</a></strong></p>";
+    }
     $produto= 0;
     // contar numero de linhas existentes 
     //if para verificar se existe produto dentro do carrinho

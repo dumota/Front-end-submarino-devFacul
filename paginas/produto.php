@@ -35,8 +35,19 @@
     </div>
 
     <div class="col-12 col-md-8">
-        tarefa colocar o valor
+    <?php
+    if( empty ($promo)){
+     $valor = "R$".number_format($valor,2,",",".");
+        $de = "";
+    }else{
+        $de = "R$".number_format($valor,2,",",".");
+        $valor = "R$".number_format($promo,2,",",".");
+    }
 
+    echo"<p class='De text-center' >{$de}</p>
+         <p class='valor text-center'>{$valor}</p>";
+
+    ?>        
     <form name="formProduto" method="post" action="index.php?pagina=adicionar">
         <input type="hidden" name="id" value="<?= $id ?>">
         <div class="input-group">

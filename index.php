@@ -17,6 +17,7 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/parsley.min.js"></script>
    
 
     <title>subsubmarino</title>
@@ -58,11 +59,16 @@
 
 
              <ul class="navbar-nav ml-auto">
-                   <li class="nav-link">
-                       <a class="nav-link" href="index.php?pagina=carrinho">
-                           <i class="fas  fa-shopping-cart"></i>
-                       </a>
-                   </li>
+                  <li class="nav-item">  
+                    <a href="index.php?pagina=login" class="nav-link">
+                       <i class="fas fa-user"></i> 
+                    </a>
+                  </li>  
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.php?pagina=carrinho">
+                        <i class="fas  fa-shopping-cart"></i>
+                    </a>
+                  </li>
              </ul>      
 
 
@@ -99,6 +105,12 @@
                         </p>
                     </p>
                     <hr>
+                    <p class="text-center">    
+                          Desenvolvido por Eduardo Mota - <i class="fab fa-whatsapp"></i> whatsapp para contato (99)9999-9999 |
+                          <i class="fab fa-facebook-messenger"></i>
+                          <i class="fab fa-instagram"></i>
+                          <i class="fab fa-youtube"></i>
+                    </p>
                 </div>
         
         </footer>
